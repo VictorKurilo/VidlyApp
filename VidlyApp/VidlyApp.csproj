@@ -249,9 +249,22 @@
     <Compile Include="Migrations\201803021648490_DbSetMovie.Designer.cs">
       <DependentUpon>201803021648490_DbSetMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803021655420_AddedGenreChangedMovie.cs" />
+    <Compile Include="Migrations\201803021655420_AddedGenreChangedMovie.Designer.cs">
+      <DependentUpon>201803021655420_AddedGenreChangedMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021658095_AddedGenreId.cs" />
+    <Compile Include="Migrations\201803021658095_AddedGenreId.Designer.cs">
+      <DependentUpon>201803021658095_AddedGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021659412_AddDataToMoviesGenre.cs" />
+    <Compile Include="Migrations\201803021659412_AddDataToMoviesGenre.Designer.cs">
+      <DependentUpon>201803021659412_AddDataToMoviesGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -376,6 +389,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803021648490_DbSetMovie.resx">
       <DependentUpon>201803021648490_DbSetMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021655420_AddedGenreChangedMovie.resx">
+      <DependentUpon>201803021655420_AddedGenreChangedMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021658095_AddedGenreId.resx">
+      <DependentUpon>201803021658095_AddedGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021659412_AddDataToMoviesGenre.resx">
+      <DependentUpon>201803021659412_AddDataToMoviesGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
