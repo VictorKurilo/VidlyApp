@@ -7,3 +7,10 @@
 
 <h2>@Model.Name</h2>
 
+<ul class="list-group">
+    <li class="list-group-item">Membership Type: @Model.MembershipType.Name</li>
+    @if (Model.BirthDate.HasValue)
+    {
+        <li class="list-group-item">Birthday: @Model.BirthDate.Value.ToShortDateString()</li>
+    }
+</ul>

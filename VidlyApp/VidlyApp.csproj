@@ -225,6 +225,30 @@
     <Compile Include="Migrations\201803021531057_AddDatatoMembershipType.Designer.cs">
       <DependentUpon>201803021531057_AddDatatoMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803021603339_AddedDateTime.cs" />
+    <Compile Include="Migrations\201803021603339_AddedDateTime.Designer.cs">
+      <DependentUpon>201803021603339_AddedDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021606337_AddedDateTimeNulable.cs" />
+    <Compile Include="Migrations\201803021606337_AddedDateTimeNulable.Designer.cs">
+      <DependentUpon>201803021606337_AddedDateTimeNulable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021609107_AddBirthdateValyes.cs" />
+    <Compile Include="Migrations\201803021609107_AddBirthdateValyes.Designer.cs">
+      <DependentUpon>201803021609107_AddBirthdateValyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021635105_ChangedCustomerBirthDate.cs" />
+    <Compile Include="Migrations\201803021635105_ChangedCustomerBirthDate.Designer.cs">
+      <DependentUpon>201803021635105_ChangedCustomerBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021637319_AddNullBirthDayToCustomer2.cs" />
+    <Compile Include="Migrations\201803021637319_AddNullBirthDayToCustomer2.Designer.cs">
+      <DependentUpon>201803021637319_AddNullBirthDayToCustomer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021648490_DbSetMovie.cs" />
+    <Compile Include="Migrations\201803021648490_DbSetMovie.Designer.cs">
+      <DependentUpon>201803021648490_DbSetMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -334,6 +358,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803021531057_AddDatatoMembershipType.resx">
       <DependentUpon>201803021531057_AddDatatoMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021603339_AddedDateTime.resx">
+      <DependentUpon>201803021603339_AddedDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021606337_AddedDateTimeNulable.resx">
+      <DependentUpon>201803021606337_AddedDateTimeNulable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021609107_AddBirthdateValyes.resx">
+      <DependentUpon>201803021609107_AddBirthdateValyes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021635105_ChangedCustomerBirthDate.resx">
+      <DependentUpon>201803021635105_ChangedCustomerBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021637319_AddNullBirthDayToCustomer2.resx">
+      <DependentUpon>201803021637319_AddNullBirthDayToCustomer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021648490_DbSetMovie.resx">
+      <DependentUpon>201803021648490_DbSetMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

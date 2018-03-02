@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 
 namespace VidlyApp.Models
@@ -13,6 +14,8 @@ namespace VidlyApp.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+       
+        public DateTime? BirthDate { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }
