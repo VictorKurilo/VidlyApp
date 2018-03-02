@@ -75,3 +75,5 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddMembershipType.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.PopulateMembershipTypes.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.applyanotationtocustomename.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.UpdateMembershipTypesRecords.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddDatatoMembershipType.resources
