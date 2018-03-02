@@ -74,3 +74,4 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csproj.Gene
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddIsSubscribedToCustomer.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddMembershipType.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.PopulateMembershipTypes.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.applyanotationtocustomename.resources
