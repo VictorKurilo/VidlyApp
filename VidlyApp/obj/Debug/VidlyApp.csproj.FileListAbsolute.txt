@@ -88,3 +88,4 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addDataMovies.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updateMembershipTypes.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addedGenres.resources

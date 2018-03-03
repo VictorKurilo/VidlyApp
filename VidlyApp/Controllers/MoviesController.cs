@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using VidlyApp.Models;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp.Controllers
 {
@@ -20,6 +21,40 @@ namespace VidlyApp.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+
+            var genres = _context.Genres.ToList();
+
+            var movieModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", movieModel);
+        }
+
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieDb = _context.Movies.SingleOrDefault(m => m.Id == movie.Id);
+
+                movieDb.Name = movie.Name;
+                movieDb.ReleaseDate = movie.ReleaseDate;
+                movieDb.Genre.Name = movie.Genre.Name;
+                movieDb.Stock = movie.Stock;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
         }
 
         // GET: Movies
