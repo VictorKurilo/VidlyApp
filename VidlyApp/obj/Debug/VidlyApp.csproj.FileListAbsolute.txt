@@ -65,7 +65,6 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Microsoft.AI.DependencyCol
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Microsoft.AI.Web.xml
-C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csprojResolveAssemblyReference.cache
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csproj.CoreCompileInputs.cache
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.dll
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.pdb
@@ -87,3 +86,5 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddedGenreId.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddDataToMoviesGenre.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addDataMovies.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updateMembershipTypes.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csprojResolveAssemblyReference.cache

@@ -34,6 +34,11 @@ namespace VidlyApp.Controllers
         {
             var movies = _context.Movies.Include(g => g.Genre).SingleOrDefault(m => m.Id == id);
 
+            if (movies == null)
+            {
+                return HttpNotFound();
+            }
+
             return View(movies);
         }
 
