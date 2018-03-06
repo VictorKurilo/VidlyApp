@@ -273,6 +273,18 @@
     <Compile Include="Migrations\201803032121186_addedGenres.Designer.cs">
       <DependentUpon>201803032121186_addedGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803032229118_updated required in movie.cs" />
+    <Compile Include="Migrations\201803032229118_updated required in movie.Designer.cs">
+      <DependentUpon>201803032229118_updated required in movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803032251405_removed required more.cs" />
+    <Compile Include="Migrations\201803032251405_removed required more.Designer.cs">
+      <DependentUpon>201803032251405_removed required more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803032310124_updated required.cs" />
+    <Compile Include="Migrations\201803032310124_updated required.Designer.cs">
+      <DependentUpon>201803032310124_updated required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -347,9 +359,9 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
-    <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -424,6 +436,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803032121186_addedGenres.resx">
       <DependentUpon>201803032121186_addedGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032229118_updated required in movie.resx">
+      <DependentUpon>201803032229118_updated required in movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032251405_removed required more.resx">
+      <DependentUpon>201803032251405_removed required more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032310124_updated required.resx">
+      <DependentUpon>201803032310124_updated required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

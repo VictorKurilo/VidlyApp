@@ -67,7 +67,7 @@ namespace VidlyApp.Controllers
         }
 
 
-        [Route("Customers/Details/{id}")]
+        [Route("Customers/Edit/{id}")]
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);

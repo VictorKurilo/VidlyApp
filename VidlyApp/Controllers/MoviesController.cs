@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Web;
 using System.Web.Mvc;
 using VidlyApp.Models;
@@ -36,23 +37,33 @@ namespace VidlyApp.Controllers
             return View("MovieForm", movieModel);
         }
 
+        [HttpPost]
         public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
             {
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else
             {
-                var movieDb = _context.Movies.SingleOrDefault(m => m.Id == movie.Id);
+                var movieDb = _context.Movies.Single(m => m.Id == movie.Id);
 
                 movieDb.Name = movie.Name;
                 movieDb.ReleaseDate = movie.ReleaseDate;
-                movieDb.Genre.Name = movie.Genre.Name;
+                movieDb.GenreId = movie.GenreId;
                 movieDb.Stock = movie.Stock;
             }
 
+            try
+            {
             _context.SaveChanges();
+
+            }
+            catch (DbEntityValidationException e)
+            {
+                Console.WriteLine(e);
+            }
 
             return RedirectToAction("Index", "Movies");
         }
@@ -65,17 +76,34 @@ namespace VidlyApp.Controllers
             return View(movies);
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Edit(int id)
         {
-            var movies = _context.Movies.Include(g => g.Genre).SingleOrDefault(m => m.Id == id);
+            var movies = _context.Movies.SingleOrDefault(m => m.Id == id);
 
             if (movies == null)
             {
                 return HttpNotFound();
             }
 
-            return View(movies);
+            var moviewModel = new MovieFormViewModel
+            {
+                Movie = movies,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", moviewModel);
+        }
+
+        public ActionResult Details(int id)
+            {
+                var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+                if (movie == null)
+                    return HttpNotFound();
+
+                return View(movie);
+
+            }
         }
 
     }
-}
