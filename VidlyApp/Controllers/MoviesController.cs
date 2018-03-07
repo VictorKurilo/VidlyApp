@@ -31,6 +31,7 @@ namespace VidlyApp.Controllers
 
             var movieModel = new MovieFormViewModel
             {
+                Movie = new Movie(),
                 Genres = genres
             };
 
@@ -38,6 +39,7 @@ namespace VidlyApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
