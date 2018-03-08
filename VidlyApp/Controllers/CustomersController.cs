@@ -61,7 +61,7 @@ namespace VidlyApp.Controllers
                 // can use automapper
                 customerInDb.Name = customer.Name;
                 customerInDb.BirthDate = customer.BirthDate;
-                customerInDb.MembershipTypeID = customer.MembershipTypeID;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
             }
 

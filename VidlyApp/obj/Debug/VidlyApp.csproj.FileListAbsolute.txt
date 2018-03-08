@@ -92,3 +92,13 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatedrequiredinmovie.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.removedrequiredmore.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatedrequired.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Net.Http.Formatting.dll
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Web.Http.dll
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Web.Http.WebHost.dll
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Net.Http.Formatting.xml
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Web.Http.xml
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\System.Web.Http.WebHost.xml
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\AutoMapper.dll
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\AutoMapper.xml
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatesAPI.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatesmodelkeys.resources
