@@ -18,21 +18,30 @@ namespace VidlyApp.ViewModels
         [StringLength(255)]
         public string Name { get; set; }
 
+        [Display(Name = "Genre")]
+        [Required]
+        public int? GenreId { get; set; }
+
         [Required]
         [Display(Name = "Release Date")]
         public DateTime? ReleaseDate { get; set; }
 
         [Required]
-        [Range(1, 20, ErrorMessage = "The field Number in Stock must be between 1 and 20")]
+        [Range(1, 20)]
         [Display(Name = "Number in Stock")]
         public int? Stock { get; set; }
 
-        [Required]
-        public int? GenreId { get; set; }
+     
 
 
 
-        public string Title => Id != 0 ? "Edit Movie" : "New Movie";
+        public string Title {
+            get
+            {
+                return Id != 0 ? "Edit Movie" : "New Movie";
+
+            }
+        }
 
         public MovieFormViewModel()
         {
@@ -45,6 +54,7 @@ namespace VidlyApp.ViewModels
             Name = movie.Name;
             ReleaseDate = movie.ReleaseDate;
             GenreId = movie.GenreId;
+            Stock = movie.Stock;
         }
     }
 }

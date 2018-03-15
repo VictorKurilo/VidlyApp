@@ -37,11 +37,38 @@ namespace VidlyApp.Controllers
             return View("MovieForm", movieModel);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var movies = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+            if (movies == null)
+            {
+                return HttpNotFound();
+            }
+
+            var moviewModel = new MovieFormViewModel(movies)
+            {
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", moviewModel);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie);
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
-
             if (!ModelState.IsValid)
             {
                 var viewModel = new MovieFormViewModel(movie)
@@ -67,15 +94,8 @@ namespace VidlyApp.Controllers
                 movieDb.Stock = movie.Stock;
             }
 
-            try
-            {
-            _context.SaveChanges();
 
-            }
-            catch (DbEntityValidationException e)
-            {
-                Console.WriteLine(e);
-            }
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Movies");
         }
@@ -83,38 +103,10 @@ namespace VidlyApp.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
-
-            return View(movies);
+            return View();
         }
 
-        public ActionResult Edit(int id)
-        {
-            var movies = _context.Movies.SingleOrDefault(m => m.Id == id);
 
-            if (movies == null)
-            {
-                return HttpNotFound();
-            }
-
-            var moviewModel = new MovieFormViewModel(movies)
-            {
-                Genres = _context.Genres.ToList()
-            };
-
-            return View("MovieForm", moviewModel);
-        }
-
-        public ActionResult Details(int id)
-            {
-                var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
-
-                if (movie == null)
-                    return HttpNotFound();
-
-                return View(movie);
-
-            }
-        }
 
     }
+}
