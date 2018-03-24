@@ -101,3 +101,7 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\AutoMapper.dll
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\AutoMapper.xml
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatesAPI.resources
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.updatesmodelkeys.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.seedUsers.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addDrivingLicense.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addPhone.resources

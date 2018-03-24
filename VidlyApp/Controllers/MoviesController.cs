@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using VidlyApp.Models;
 using VidlyApp.ViewModels;
 
@@ -24,6 +25,7 @@ namespace VidlyApp.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
 
@@ -37,6 +39,7 @@ namespace VidlyApp.Controllers
             return View("MovieForm", movieModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movies = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -103,7 +106,10 @@ namespace VidlyApp.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+
+            return View("ReadOnlyList");
         }
 
 
