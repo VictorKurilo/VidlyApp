@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using VidlyApp.Models;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp.Dtos
 {

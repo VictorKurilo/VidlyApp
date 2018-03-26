@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp.ViewModels
 {

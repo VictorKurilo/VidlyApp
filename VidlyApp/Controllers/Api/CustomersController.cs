@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
+using VidlyApp.DbContext;
 using VidlyApp.Dtos;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
 
 namespace VidlyApp.Controllers.Api
@@ -46,6 +47,7 @@ namespace VidlyApp.Controllers.Api
 
         // POST /api/customers
         [HttpPost]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
@@ -64,6 +66,7 @@ namespace VidlyApp.Controllers.Api
 
         // PUT /api/customers/1
         [HttpPut]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public IHttpActionResult UpdateCustomer(int id, CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
@@ -87,6 +90,7 @@ namespace VidlyApp.Controllers.Api
 
         // DELETE /api/customers/1
         [HttpDelete]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public IHttpActionResult DeleteCustomer(int id)
         {
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);

@@ -5,7 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using VidlyApp.Models;
+using VidlyApp.DbContext;
+using VidlyApp.DbContext;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp
 {

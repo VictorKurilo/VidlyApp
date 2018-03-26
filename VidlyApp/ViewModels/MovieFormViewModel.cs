@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp.ViewModels
 {

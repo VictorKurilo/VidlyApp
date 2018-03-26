@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
+using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
+using VidlyApp.DbContext;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
 using VidlyApp.ViewModels;
+
 
 namespace VidlyApp.Controllers
 {
@@ -23,6 +28,7 @@ namespace VidlyApp.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -38,6 +44,7 @@ namespace VidlyApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
@@ -73,6 +80,15 @@ namespace VidlyApp.Controllers
         // GET: Customers
         public ActionResult Index()
         {
+            if (MemoryCache.Default["Genres"] == null)
+            {
+                MemoryCache.Default["Genres"] = _context.Genres.ToList();
+            }
+
+            var genres = MemoryCache.Default["Genres"] as IEnumerable;
+
+
+
             return View();
         }
 
@@ -90,6 +106,7 @@ namespace VidlyApp.Controllers
             return View(customer);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);

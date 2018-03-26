@@ -5,7 +5,9 @@ using System.Data.Entity;
 using System.Net;
 using System.Web.Http;
 using AutoMapper;
+using VidlyApp.DbContext;
 using VidlyApp.Dtos;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
 
 

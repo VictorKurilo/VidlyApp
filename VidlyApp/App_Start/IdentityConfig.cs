@@ -10,7 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using VidlyApp.Models;
+using VidlyApp.DbContext;
+using VidlyApp.DbContext;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp
 {

@@ -5,7 +5,9 @@ using System.Web;
 using AutoMapper;
 using VidlyApp.Controllers.Api;
 using VidlyApp.Dtos;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
+using VidlyApp.ViewModels;
 
 namespace VidlyApp.App_Start
 {

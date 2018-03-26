@@ -6,7 +6,10 @@ using System.Data.Entity.Validation;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using VidlyApp.DbContext;
+using VidlyApp.DbContext;
 using VidlyApp.Models;
+using VidlyApp.ViewModels;
 using VidlyApp.ViewModels;
 
 namespace VidlyApp.Controllers
@@ -70,6 +73,7 @@ namespace VidlyApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
