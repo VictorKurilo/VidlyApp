@@ -7,7 +7,6 @@ using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
 using VidlyApp.DbContext;
-using VidlyApp.DbContext;
 using VidlyApp.Models;
 using VidlyApp.ViewModels;
 
@@ -16,6 +15,9 @@ namespace VidlyApp.Controllers
 {
     public class CustomersController : Controller
     {
+
+        private const string Genres = "Genres";
+
         private ApplicationDbContext _context;
 
         public CustomersController()
@@ -80,14 +82,12 @@ namespace VidlyApp.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            if (MemoryCache.Default["Genres"] == null)
+            if (MemoryCache.Default[Genres] == null)
             {
-                MemoryCache.Default["Genres"] = _context.Genres.ToList();
+                MemoryCache.Default[Genres] = _context.Genres.ToList();
             }
-
-            var genres = MemoryCache.Default["Genres"] as IEnumerable;
-
-
+            
+            var genres = MemoryCache.Default[Genres] as IEnumerable;
 
             return View();
         }
