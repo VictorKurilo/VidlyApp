@@ -109,4 +109,6 @@ C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Glimpse.AspNet.dll
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Glimpse.Core.dll
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Glimpse.EF6.dll
 C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\bin\Glimpse.Mvc5.dll
-C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.csprojResolveAssemblyReference.cache
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.AddedRentals.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.update.resources
+C:\Users\Victor Kurilo\Projects\VidlyApp\VidlyApp\obj\Debug\VidlyApp.Migrations.addedNumberAvailableinmovie.resources

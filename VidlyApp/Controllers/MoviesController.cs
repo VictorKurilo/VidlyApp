@@ -7,9 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using VidlyApp.DbContext;
-using VidlyApp.DbContext;
 using VidlyApp.Models;
-using VidlyApp.ViewModels;
 using VidlyApp.ViewModels;
 
 namespace VidlyApp.Controllers
@@ -89,6 +87,11 @@ namespace VidlyApp.Controllers
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
+
+                // add stock to numberAvailable
+                var currentStock = movie.Stock;
+                movie.NumberAvailable = (byte)currentStock;
+
                 _context.Movies.Add(movie);
             }
             else

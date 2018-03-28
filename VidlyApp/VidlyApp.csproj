@@ -221,6 +221,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
+    <Compile Include="Controllers\Api\NewRentalsController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
@@ -230,6 +232,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
+    <Compile Include="Dtos\NewRentalDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -342,7 +345,20 @@
     <Compile Include="Migrations\201803201451381_addPhone.Designer.cs">
       <DependentUpon>201803201451381_addPhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803271959451_AddedRentals.cs" />
+    <Compile Include="Migrations\201803271959451_AddedRentals.Designer.cs">
+      <DependentUpon>201803271959451_AddedRentals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803281315454_update.cs" />
+    <Compile Include="Migrations\201803281315454_update.Designer.cs">
+      <DependentUpon>201803281315454_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803281328367_added NumberAvailable in  movie.cs" />
+    <Compile Include="Migrations\201803281328367_added NumberAvailable in  movie.Designer.cs">
+      <DependentUpon>201803281328367_added NumberAvailable in  movie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
     <Compile Include="DbContext\ApplicationDbContext.cs" />
@@ -484,10 +500,13 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -572,6 +591,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -613,6 +636,8 @@
     <Content Include="Views\Movies\MovieForm.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\ReadOnlyList.cshtml" />
+    <Content Include="Views\Rentals\New.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -711,6 +736,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803201451381_addPhone.resx">
       <DependentUpon>201803201451381_addPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271959451_AddedRentals.resx">
+      <DependentUpon>201803271959451_AddedRentals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803281315454_update.resx">
+      <DependentUpon>201803281315454_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803281328367_added NumberAvailable in  movie.resx">
+      <DependentUpon>201803281328367_added NumberAvailable in  movie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
