@@ -1,0 +1,64 @@
+﻿@model IEnumerable<VidlyApp.Models.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="page-title">Customers</h2>
+
+<table id="custommers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#custommers").DataTable({
+                ajax: {
+                    url: "/api/customers",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "membershipType.name"
+                    }
+                ]
+            });
+
+
+            //$("#custommers").on("click",
+            //    ".js-delete",
+            //    function () {
+            //        var button = $(this);
+            //        bootbox.confirm("Are you sure you want to delete this customer?",
+            //            function (result) {
+            //                if (result) {
+            //                    $.ajax({
+            //                        url: "/api/customers/" + button.attr("data-customer-id"),
+            //                        method: "DELETE",
+            //                        success: function () {
+            //                            table.row(button.parents("tr")).remove().draw()
+            //                                .remove();
+            //                        }
+            //                    });
+            //                }
+            //            });
+            //    });
+        });
+    </script>
+}

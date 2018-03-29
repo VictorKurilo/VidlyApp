@@ -4,12 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AutoMapper;
 using VidlyApp.DbContext;
 using VidlyApp.Dtos;
 using VidlyApp.Models;
 
 namespace VidlyApp.Controllers.Api
 {
+    [Authorize(Roles = RoleName.CanManageMovies)]
     public class NewRentalsController : ApiController
     {
 
