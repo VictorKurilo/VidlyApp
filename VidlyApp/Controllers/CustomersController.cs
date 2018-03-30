@@ -89,7 +89,12 @@ namespace VidlyApp.Controllers
             
             var genres = MemoryCache.Default[Genres] as IEnumerable;
 
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+            {
+                return View("List");
+            }
+
+            return View("ReadOnlyList");
         }
 
 

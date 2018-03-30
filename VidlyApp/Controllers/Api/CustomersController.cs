@@ -7,7 +7,6 @@ using System.Web.Http;
 using AutoMapper;
 using VidlyApp.DbContext;
 using VidlyApp.Dtos;
-using VidlyApp.DbContext;
 using VidlyApp.Models;
 
 namespace VidlyApp.Controllers.Api
@@ -22,15 +21,22 @@ namespace VidlyApp.Controllers.Api
         }
 
         // GET /api/customers
-        public IHttpActionResult GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null)
         {
             // Eager loading here.. using Include
-            var customer = _context.Customers
-                .Include(c => c.MembershipType)
+            var customersQuery = _context.Customers
+                .Include(c => c.MembershipType);
+
+            if (!String.IsNullOrWhiteSpace(query))
+            {
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+            }
+
+            var customerDtos = customersQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
-            return Ok(customer);
+            return Ok(customerDtos);
         }
 
         // GET /api/customer
@@ -90,7 +96,6 @@ namespace VidlyApp.Controllers.Api
 
         // DELETE /api/customers/1
         [HttpDelete]
-        [Authorize(Roles = RoleName.CanManageMovies)]
         public IHttpActionResult DeleteCustomer(int id)
         {
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
