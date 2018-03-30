@@ -349,10 +349,6 @@
     <Compile Include="Migrations\201803271959451_AddedRentals.Designer.cs">
       <DependentUpon>201803271959451_AddedRentals.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803281315454_update.cs" />
-    <Compile Include="Migrations\201803281315454_update.Designer.cs">
-      <DependentUpon>201803281315454_update.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201803281328367_added NumberAvailable in  movie.cs" />
     <Compile Include="Migrations\201803281328367_added NumberAvailable in  movie.Designer.cs">
       <DependentUpon>201803281328367_added NumberAvailable in  movie.cs</DependentUpon>
@@ -752,9 +748,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803271959451_AddedRentals.resx">
       <DependentUpon>201803271959451_AddedRentals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803281315454_update.resx">
-      <DependentUpon>201803281315454_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803281328367_added NumberAvailable in  movie.resx">
       <DependentUpon>201803281328367_added NumberAvailable in  movie.cs</DependentUpon>
