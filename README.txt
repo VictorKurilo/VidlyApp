@@ -7,7 +7,7 @@ You may register as a new user and have basic functuanality of web site like, vi
 
 Use one of this logins to see diferent roles:
 
-Admin: admin@vidly.com - GJ89jxvxfhn*(
+Admin: admin@vidly.com 
 
-User: guest@vidly.com - GJ89jxvxfhn*(
+User: guest@vidly.com 
 
